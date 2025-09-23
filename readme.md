@@ -45,6 +45,25 @@ placeGameProject (根项目)
 ├── server-provider (服务提供者模块)
 └── server-consumer (服务消费者模块)
 
+启动方式：
+# 1. 先编译整个项目（在根目录 placeGameProject 下）
+mvn clean install
+
+# 2. 启动 Eureka Server（进入 eureka-server 目录）
+cd eureka-server
+mvn spring-boot:run
+启动后可访问：http://localhost:8761
+
+# 3. 启动 Server Provider（在另一个终端窗口，进入 server-provider 目录）
+cd server-provider
+mvn spring-boot:run
+启动后可访问：http://localhost:8081/hello
+
+# 4. 启动 Server Consumer（在另一个终端窗口，进入 server-consumer 目录）
+cd server-consumer
+mvn spring-boot:run
+启动后可访问：http://localhost:8082/hello
+
 frontend:前端
 解压nw.js的SDK文件到这个目录后运行nw.exe
 ```
