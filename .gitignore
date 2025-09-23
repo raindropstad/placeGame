@@ -1,0 +1,4 @@
+# 忽略 frontend 目录下除了指定文件和目录外的所有内容
+frontend/*
+!frontend/package.json
+!frontend/placeGame/
