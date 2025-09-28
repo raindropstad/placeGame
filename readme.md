@@ -21,6 +21,14 @@ tags:
   下载SDK版本后解压到前端目录下
   > [nw.js 官方文档](hhttps://docs.nwjs.io/)
   
+- node.js
+> 1、校验安装是否完成
+> node --version
+>   V22.19.0
+> npm --version
+> 2、安装VUE脚手架
+> npm install -g @vue/cli 
+> 安装后使用 vue --version 命令查看版本号
 
 # 项目结构
 
@@ -65,5 +73,22 @@ mvn spring-boot:run
 启动后可访问：http://localhost:8082/hello
 
 frontend:前端
-解压nw.js的SDK文件到这个目录后运行nw.exe
+placeGame (根项目)
+├── build/scripts (前端脚本文件)
+├── dist (build 完成后生成)
+│   └── package.json (nw.js依赖文件)
+├── node_modules (node.js依赖文件)
+├── nwjs (nw.js SDK文件,nw上下载后解压到当前目录)
+├── public (前端静态资源文件)
+├── src (前端代码)
+│   ├── assets (前端静态资源文件)
+│   ├── components (前端组件)
+│   ├── views (前端页面)
+│   └── App.vue (前端页面)
+├── index.html (前端入口文件)
+├── package-lock.json (npm依赖文件)
+├── vite.config.js (vite配置文件)
+└── package.json (npm依赖文件)
+启动方式：在placeFrontend目录下执行 npm run build 生成dist文件，后执行npm run start
+
 ```
